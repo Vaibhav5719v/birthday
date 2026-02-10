@@ -18,7 +18,7 @@ $(document).ready(function () {
     }
 
     // Initial typing
-    typeText("#wish", "Wishing you happiness, success & lots of smiles ✨");
+    typeText("#wish", "No matter how tough the journey gets, we’ll win it together. 💪🚀🤝");
 
     // 🔵 Image Hover Effect
     $("#birthdayImage").hover(
@@ -48,7 +48,7 @@ $(document).ready(function () {
                     .fadeIn(300);
             });
 
-            typeText("#wish", "Bhai ho toh tu jaisa ho 💙🤝");
+            typeText("#wish", "I won't forget you, buddy..🥹🫂");
 
         } else {
             $(this).fadeOut(300, function () {
@@ -57,7 +57,7 @@ $(document).ready(function () {
                     .fadeIn(300);
             });
 
-            typeText("#wish", "Wishing you success, strength & good health 💪🔥");
+            typeText("#wish", "No matter how tough the journey gets, we’ll win it together. 💪🚀🤝");
         }
 
         isFriendPhoto = !isFriendPhoto;
@@ -101,36 +101,6 @@ $(document).ready(function () {
             navigator.vibrate([200, 100, 200]);
         }
     });
-
-    // 🌈 THEME BUTTONS FIX
-    $(".theme-btn.light").click(function () {
-        $("body").css("background", "linear-gradient(135deg, #74ebd5, #ACB6E5)");
-        $(".birthday-card").css({
-            "background": "rgba(255,255,255,0.35)",
-            "border": "2px solid rgba(0,150,199,0.4)"
-        });
-    });
-
-    $(".theme-btn.dark").click(function () {
-        $("body").css("background", "linear-gradient(135deg, #0f2027, #203a43, #2c5364)");
-        $(".birthday-card").css({
-            "background": "rgba(0,0,0,0.45)",
-            "border": "2px solid rgba(77,208,225,0.4)"
-        });
-
-        $("h1, h2, #wish, .photo-hint").css("color", "#e0f7fa");
-    });
-
-    $(".theme-btn.party").click(function () {
-        $("body").css("background", "linear-gradient(135deg, #ff9a9e, #fad0c4)");
-        $("#confetti").fadeIn();
-
-        setTimeout(() => {
-            $("#confetti").fadeOut();
-        }, 3000);
-    });
-
-
 
 });
 
