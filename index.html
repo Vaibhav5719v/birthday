@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday 🎉</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery File -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="birthday-card">
+
+        <h1>🎉 Happy Birthday 🎂</h1>
+        <h2 id="name">Dear Friend 💙</h2>
+
+        <!-- Birthday Image -->
+        <div class="image-frame">
+            <img src="friend.jpg" id="birthdayImage" alt="Birthday Photo">
+        </div>
+
+
+        <p class="photo-hint">💡 Click on photo</p>
+
+        <!-- Wish Text -->
+        <p id="wish">
+            Wishing you happiness, success & lots of smiles ✨
+        </p>
+
+        <!-- Surprise Button -->
+        <button id="surpriseBtn">🎁 Click for Surprise</button>
+
+    </div>
+
+    <div id="confetti"></div>
+
+    <audio id="bgMusic" src="birthday.mp3"></audio>
+
+    <div class="themes">
+        <button class="theme-btn" id="lightTheme">🌤 Light</button>
+        <button class="theme-btn" id="darkTheme">🌙 Dark</button>
+        <button class="theme-btn" id="partyTheme">🎉 Party</button>
+    </div>
+
+
+</body>
+</html>

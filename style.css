@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* LIGHTER GRADIENT */
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card */
+.birthday-card {
+    width: 420px;
+    padding: 25px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(14px);
+
+    border-radius: 20px;
+    border: 2px solid rgba(0, 150, 199, 0.4);
+
+    box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+}
+
+/* Headings */
+h1 {
+    color: #005f73;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #023047;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Image frame auto adjusts */
+.image-frame {
+    width: 260px;              /* SAME width for both photos */
+    margin: 0 auto 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 14px;
+    border: 3px solid #00b4d8;
+    background: rgba(255,255,255,0.25);
+
+    padding: 6px;              /* thoda breathing space */
+}
+
+/* Image SAME SIZE LOOK */
+#birthdayImage {
+    width: 100%;               /* 👈 SAME visual width */
+    height: auto;              /* 👈 auto height */
+    object-fit: contain;       /* 👈 NO distortion */
+
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Hint */
+.photo-hint {
+    font-size: 13px;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+/* Text */
+#wish {
+    color: #023047;
+    font-size: 15px;
+    margin-bottom: 18px;
+    min-height: 40px;
+}
+
+/* Button */
+button {
+    padding: 10px 24px;
+    font-size: 14px;
+
+    background: white;
+    color: #0077b6;
+
+    border: 2px solid #0077b6;
+    border-radius: 25px;
+
+    cursor: pointer;
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #0077b6;
+    color: white;
+    box-shadow: 0 0 18px rgba(0,119,182,0.6);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Confetti */
+#confetti {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    display: none;
+    background-image:
+        radial-gradient(circle, #00b4d8 2px, transparent 2px),
+        radial-gradient(circle, #ffffff 2px, transparent 2px);
+    background-size: 30px 30px;
+    animation: confettiMove 2s linear infinite;
+}
+
+@keyframes confettiMove {
+    from { background-position: 0 0; }
+    to { background-position: 0 100px; }
+}
+
+/* Shake */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.4s;
+}
+/* Theme buttons container */
+.themes {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Theme buttons */
+.theme-btn {
+    padding: 7px 16px;
+    font-size: 13px;
+    border-radius: 20px;
+}
+
+@keyframes partyGlow {
+    0% { box-shadow: 0 0 10px #ffbe0b; }
+    50% { box-shadow: 0 0 25px #fb5607; }
+    100% { box-shadow: 0 0 10px #ffbe0b; }
+}
+
+.party {
+    animation: partyGlow 1.5s infinite;
+}
+@media (max-width: 500px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .birthday-card {
+        width: 100%;
+        max-width: 360px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    #birthdayImage {
+        width: 100%;
+    }
+
+    .themes {
+        gap: 10px;
+    }
+
+    .theme-btn {
+        flex: 1 1 40%;
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
