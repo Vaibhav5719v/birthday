@@ -7,6 +7,7 @@
 body {
     min-height: 100vh;
     display: flex;
+    flex-direction: column; /* ✅ added */
     align-items: center;
     justify-content: center;
 
@@ -45,7 +46,7 @@ h2 {
 
 /* Image frame auto adjusts */
 .image-frame {
-    width: 260px;              /* SAME width for both photos */
+    width: 260px;
     margin: 0 auto 14px;
 
     display: flex;
@@ -56,20 +57,18 @@ h2 {
     border: 3px solid #00b4d8;
     background: rgba(255,255,255,0.25);
 
-    padding: 6px;              /* thoda breathing space */
+    padding: 6px;
 }
 
 /* Image SAME SIZE LOOK */
 #birthdayImage {
-    width: 100%;               /* 👈 SAME visual width */
-    height: auto;              /* 👈 auto height */
-    object-fit: contain;       /* 👈 NO distortion */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
 
 /* Hint */
 .photo-hint {
@@ -143,20 +142,24 @@ button:active {
 .shake {
     animation: shake 0.4s;
 }
+
 /* Theme buttons container */
 .themes {
-    margin-top: 18px;
+    width: 100%;
+    max-width: 420px;          /* ✅ card ke equal */
+    margin-top: 16px;
+
     display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 /* Theme buttons */
 .theme-btn {
-    padding: 7px 16px;
+    flex: 1;                  /* ✅ equal width */
+    padding: 10px 0;
     font-size: 13px;
-    border-radius: 20px;
+    border-radius: 18px;
 }
 
 @keyframes partyGlow {
@@ -168,6 +171,8 @@ button:active {
 .party {
     animation: partyGlow 1.5s infinite;
 }
+
+/* Mobile Responsive */
 @media (max-width: 500px) {
 
     body {
@@ -193,13 +198,13 @@ button:active {
     }
 
     .themes {
-        gap: 10px;
+        max-width: 360px;
+        margin-top: 14px;
     }
 
     .theme-btn {
-        flex: 1 1 40%;
         font-size: 12px;
-        padding: 8px 10px;
+        padding: 10px 0;
     }
 
     button {
@@ -208,3 +213,22 @@ button:active {
     }
 }
 
+/* QR Code */
+.qr-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.qr-box p {
+    font-size: 13px;
+    color: #023047;
+    margin-bottom: 6px;
+}
+
+.qr-box img {
+    width: 130px;
+    height: 130px;
+    background: white;
+    padding: 6px;
+    border-radius: 12px;
+}
