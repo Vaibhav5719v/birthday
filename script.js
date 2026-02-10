@@ -102,39 +102,34 @@ $(document).ready(function () {
         }
     });
 
-        // 🌤 LIGHT THEME
-    $("#lightTheme").click(function () {
-        $("body").css(
-            "background",
-            "linear-gradient(135deg, #74ebd5, #ACB6E5)"
-        );
-        $(".birthday-card").removeClass("party");
+    // 🌈 THEME BUTTONS FIX
+    $(".theme-btn.light").click(function () {
+        $("body").css("background", "linear-gradient(135deg, #74ebd5, #ACB6E5)");
+        $(".birthday-card").css({
+            "background": "rgba(255,255,255,0.35)",
+            "border": "2px solid rgba(0,150,199,0.4)"
+        });
     });
 
-    // 🌙 DARK THEME
-    $("#darkTheme").click(function () {
-        $("body").css(
-            "background",
-            "linear-gradient(135deg, #0f2027, #203a43, #2c5364)"
-        );
-        $(".birthday-card").removeClass("party");
+    $(".theme-btn.dark").click(function () {
+        $("body").css("background", "linear-gradient(135deg, #0f2027, #203a43, #2c5364)");
+        $(".birthday-card").css({
+            "background": "rgba(0,0,0,0.45)",
+            "border": "2px solid rgba(77,208,225,0.4)"
+        });
+
+        $("h1, h2, #wish, .photo-hint").css("color", "#e0f7fa");
     });
 
-    // 🎉 PARTY THEME
-    $("#partyTheme").click(function () {
-        $("body").css(
-            "background",
-            "linear-gradient(135deg, #ff9a9e, #fad0c4)"
-        );
-
-        $(".birthday-card").addClass("party");
-
-        // Fireworks feel (fast confetti burst)
+    $(".theme-btn.party").click(function () {
+        $("body").css("background", "linear-gradient(135deg, #ff9a9e, #fad0c4)");
         $("#confetti").fadeIn();
+
         setTimeout(() => {
             $("#confetti").fadeOut();
-        }, 4000);
+        }, 3000);
     });
+
 
 
 });
