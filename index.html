@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Happy Birthday 🎉</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- jQuery File -->
     <script src="script.js"></script>
 </head>
+
 
 <body>
 
@@ -37,18 +36,26 @@
         <!-- Surprise Button -->
         <button id="surpriseBtn">🎁 Click for Surprise</button>
 
+        <div class="themes">
+        <button class="theme-btn light">☀️ Light</button>
+        <button class="theme-btn dark">🌙 Dark</button>
+        <button class="theme-btn party">🎉 Party</button>
+        </div>
+
+
     </div>
 
     <div id="confetti"></div>
 
     <audio id="bgMusic" src="birthday.mp3"></audio>
 
-    <div class="themes">
-        <button class="theme-btn" id="lightTheme">🌤 Light</button>
-        <button class="theme-btn" id="darkTheme">🌙 Dark</button>
-        <button class="theme-btn" id="partyTheme">🎉 Party</button>
-    </div>
+    <div class="qr-box">
+        <p>📱 Scan to Open</p>
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2FVaibhav5719v.github.io%2Fbirthday%2Findex.html%3Fv%3D6"
+          alt="QR Code">
 
+    </div>
 
 </body>
 </html>
